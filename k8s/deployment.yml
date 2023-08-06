@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: myap-container
+          image: myapp-image:latest
+          resources:
+            requests:
+              memory: "6G1"
+              cpu: "2"
+            limits:
+              memory: "8Gi"
+              cpu: "4"
