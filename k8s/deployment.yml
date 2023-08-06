@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: java-threads-test-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myapp
+      app: java-threads-test
   template:
     metadata:
       labels:
-        app: myapp
+        app: java-threads-test
     spec:
       containers:
         - name: myap-container
-          image: myapp-image:latest
+          image: java-threads-test:latest
           resources:
             requests:
-              memory: "6G1"
+              memory: "6Gi"
               cpu: "2"
             limits:
               memory: "8Gi"
