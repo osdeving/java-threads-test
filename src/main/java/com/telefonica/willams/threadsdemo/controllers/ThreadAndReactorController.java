@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-public class MyController {
+public class ThreadAndReactorController {
 
     @Autowired
     private WebClient.Builder webClientBuilder;
